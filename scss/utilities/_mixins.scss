@@ -1,0 +1,86 @@
+//******** Flexbox Mixin ********
+//@include flexible(display, direction, wrap, justify-content, align-items) {}
+@mixin flexible(
+    $display: flex,
+    $direction: null,
+    $wrap: null,
+    $justify-content: flex-start,
+    $align-items: flex-start)
+    //null prevents unwanted css output
+    {
+        display: $display;
+        flex-direction: $direction;
+        flex-wrap: $wrap;
+        justify-content: $justify-content;
+        align-items: $align-items;
+        @content;
+    };
+
+//******** Media Query Mixin ********
+// @include mq(sm) {}
+@mixin mq($breakpoint) {
+    @media (min-width: $breakpoint) {
+        @content;
+    }
+  }
+
+//******** Grid Mixin ********
+@mixin grid(){
+    @for $i from 1 through 12 {
+        .grid__col--#{$i} {
+         width: ($i / 12) * 100%;
+        }
+    } 
+}
+
+//********** Centering Mixin ********
+@mixin centerer {
+    margin: auto;
+    text-align: center;
+}
+
+//******** Blockquote Mixin ********
+@mixin blockquotation {
+    border-left: 4px solid $block-quote-border;
+    padding: 0.4em;
+    border-radius: 0.2em;
+    @content;
+}
+
+@mixin btn(
+    $background-color: null,
+     $width: 100%) {
+        text-transform: uppercase;
+        width: $width;
+        background-color: $background-color;
+        border: none;
+        border-radius: 0.25em;
+        padding: 0.75em;
+        margin-top: 0.8em;
+        color: white;
+        @content;
+    }
+@mixin add-theme-color($i) {
+    //Use this to add background color to the grid system section of page
+    .grid__col--#{$i}.theme__colors {
+        //the following if else clauses sets the bg color of the grid elements
+        @if ($i == 3) {
+         background-color: $grid-col-3;
+     } @else if ($i == 4) {
+         background-color: $grid-col-4;
+     } @else if ($i == 5) {
+         background-color: $grid-col-5;
+     } @else if ($i == 6) {
+         background-color: $grid-col-6;
+     } @else if ($i == 7) {
+         background-color: $grid-col-7;
+     } @else if ($i == 8) {
+         background-color: $grid-col-8;
+     } @else if ($i == 12) {
+         background-color: $grid-col-12
+     }
+     align-items: flex-start;
+     padding-left: 0.5em;
+    border-radius: 0.4em;
+ }
+}

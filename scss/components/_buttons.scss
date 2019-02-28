@@ -1,0 +1,44 @@
+//******** buttons ********
+.btn--default {
+    @include btn($background-color: $default, $width: 100%);
+    //Adds right spacing to button on screen > 769px
+    @include mq($sm) {
+        margin-right: 0.5%;
+    }
+    
+}
+
+
+
+.btn--success {
+    @include btn($background-color: $success, $width: 100%);
+    //Adds right spacing to button on screen > 769px
+    @include mq($sm) {
+        margin-right: 0.5%;
+    }
+}
+
+.btn--error {
+    @include btn($background-color: $error, $width: 100%);
+    //Adds right spacing to button on screen > 769px
+    @include mq($sm) {
+        margin-right: 0.5%;
+    }
+}
+
+.btn--warning {
+    @include btn($background-color: $warning, $width: 100%);
+    //Adds right spacing to button on screen > 769px
+    @include mq($sm) {
+        margin-right: 0.5%;
+    }
+}
+
+.btn--info {
+    @include btn($background-color: $info, $width: 100%);
+   //Adds right spacing to button on screen > 769px
+   @include mq($sm) {
+    margin-right: 0.5%;
+}
+}
+
