@@ -1,17 +1,3 @@
-//Setting mobile view width 12 column grid system
-@for $i from 1 through 12 {
-    .grid__col--#{$i} {
-        width: 100%;
-        padding-top: 0.6em; 
-        padding-bottom: 0.6em;
-        margin-bottom: 0.25em;
-        margin-top: 0.25em;
-        @include flexible($direction: column,
-                        $align-items: center);
-                    
-   }
-}
-
 .flex--row {
     @include flexible($direction: column,
                        $justify-content: center);
@@ -21,22 +7,6 @@
             
         }
 }
-@include mq($sm) {
-    @for $i from 1 through 12 {
-        .grid__col--#{$i} {
-            width: calc(#{$i} / 12 * 100% + 2* (#{$i} * #{$gap}) );
-            margin: $gap;
-            padding-left: $gap;
-            padding-right: $gap;
-            //code below makes individual grid containers flex containers
-            @include flexible($direction: row,
-                        $justify-content: center);
-        }  
-    }
-}
-
-
-
 .centered {
     @include centerer;
 }
