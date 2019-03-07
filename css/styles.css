@@ -633,6 +633,12 @@ a:link {
   height: 35%;
 }
 
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
 .btn--default {
   text-transform: uppercase;
   width: 100%;
