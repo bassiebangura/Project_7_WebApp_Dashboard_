@@ -639,6 +639,10 @@ a:link {
   height: 20px;
 }
 
+.st0 {
+  fill: #ee6910;
+}
+
 .btn--default {
   text-transform: uppercase;
   width: 100%;
