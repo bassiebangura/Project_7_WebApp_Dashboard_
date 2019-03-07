@@ -1,17 +1,14 @@
 .container  {
     display: grid;
     grid-template-columns:minmax(0, 1fr);
-    grid-template-rows: minmax(100px, auto);
+    grid-template-rows: minmax(32px, auto);
     grid-template-areas: 
     "banner"
     "main-nav"
     "main"
 }
 
-.main-nav {
-    display: grid;
-    grid-template-rows: minmax(100px, auto) 
-}
+
 
 .flex--row {
     @include flexible($direction: column,

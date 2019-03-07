@@ -418,16 +418,9 @@ ul {
   display: grid;
   -ms-grid-columns: minmax(0, 1fr);
       grid-template-columns: minmax(0, 1fr);
-  -ms-grid-rows: minmax(100px, auto);
-      grid-template-rows: minmax(100px, auto);
+  -ms-grid-rows: minmax(32px, auto);
+      grid-template-rows: minmax(32px, auto);
       grid-template-areas: "banner" "main-nav" "main";
-}
-
-.main-nav {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: minmax(100px, auto);
-      grid-template-rows: minmax(100px, auto);
 }
 
 .flex--row {
@@ -522,6 +515,10 @@ ul {
 .new-members__card__signup-date {
   margin: 0;
   font-size: 0.8em;
+}
+
+.banner-item {
+  display: inline-block;
 }
 
 .blockquote {
@@ -640,7 +637,12 @@ a:link {
 }
 
 .st0 {
-  fill: #ee6910;
+  fill: #777;
+}
+
+.bell-icon {
+  width: 20px;
+  height: 20px;
 }
 
 .btn--default {
