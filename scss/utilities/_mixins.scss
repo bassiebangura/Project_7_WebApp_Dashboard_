@@ -60,27 +60,4 @@
         color: white;
         @content;
     }
-@mixin add-theme-color($i) {
-    //Use this to add background color to the grid system section of page
-    .grid__col--#{$i}.theme__colors {
-        //the following if else clauses sets the bg color of the grid elements
-        @if ($i == 3) {
-         background-color: $grid-col-3;
-     } @else if ($i == 4) {
-         background-color: $grid-col-4;
-     } @else if ($i == 5) {
-         background-color: $grid-col-5;
-     } @else if ($i == 6) {
-         background-color: $grid-col-6;
-     } @else if ($i == 7) {
-         background-color: $grid-col-7;
-     } @else if ($i == 8) {
-         background-color: $grid-col-8;
-     } @else if ($i == 12) {
-         background-color: $grid-col-12
-     }
-     align-items: flex-start;
-     padding-left: 0.5em;
-    border-radius: 0.4em;
- }
-}
+
