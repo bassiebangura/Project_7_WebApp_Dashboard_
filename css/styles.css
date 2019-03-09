@@ -428,17 +428,38 @@ ul {
       grid-template-areas: "banner" "main-nav" "main";
 }
 
+@media (min-width: 340px) {
+  .container {
+    color: magenta;
+    -ms-grid-columns: 60px 1fr;
+        grid-template-columns: 60px 1fr;
+    -ms-grid-rows: minmax(32px, auto);
+        grid-template-rows: minmax(32px, auto);
+        grid-template-areas: "banner banner" "main-nav main" "main-nav main";
+  }
+}
+
+/* @media screen and (min-width: 400px) {
+    .container {
+        color: green;
+        grid-template-columns:60px 1fr;
+        grid-template-rows: minmax(32px, auto);
+        grid-template-areas: 
+        "banner banner"
+        "main-nav main"
+        "main-nav main";
+    }
+} */
 .banner {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: banner;
 }
 
-.new-members__card__details__name,
-.new-members__card__details__email,
-.new-members__card__signup-date {
-  margin: 0;
-  font-size: 0.8em;
+main {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: main;
 }
 
 .traffic-chart {
@@ -525,7 +546,7 @@ ul {
   width: 100%;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 780px) {
   .nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -550,7 +571,7 @@ ul {
   display: inline-block;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 780px) {
   .nav .nav__item {
     width: auto;
   }
@@ -618,7 +639,7 @@ a:link {
   color: white;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 780px) {
   .btn--default {
     margin-right: 0.5%;
   }
@@ -635,7 +656,7 @@ a:link {
   color: white;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 780px) {
   .btn--success {
     margin-right: 0.5%;
   }
@@ -652,7 +673,7 @@ a:link {
   color: white;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 780px) {
   .btn--error {
     margin-right: 0.5%;
   }
@@ -669,7 +690,7 @@ a:link {
   color: white;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 780px) {
   .btn--warning {
     margin-right: 0.5%;
   }
@@ -686,7 +707,7 @@ a:link {
   color: white;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 780px) {
   .btn--info {
     margin-right: 0.5%;
   }

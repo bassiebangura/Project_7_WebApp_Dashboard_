@@ -6,13 +6,27 @@
     "banner"
     "main-nav"
     "main";
-}
-
-@media screen and (min-width: 400px) {
-    .container {
-        color: blue;
-       
+    @include mq($xs) {
+        color: magenta;
+        grid-template-columns:60px 1fr;
+        grid-template-rows: minmax(32px, auto);
+        grid-template-areas: 
+        "banner banner"
+        "main-nav main"
+        "main-nav main";
+        
     }
 }
 
 
+/* @media screen and (min-width: 400px) {
+    .container {
+        color: green;
+        grid-template-columns:60px 1fr;
+        grid-template-rows: minmax(32px, auto);
+        grid-template-areas: 
+        "banner banner"
+        "main-nav main"
+        "main-nav main";
+    }
+} */
