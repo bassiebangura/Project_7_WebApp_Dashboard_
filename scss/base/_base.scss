@@ -21,6 +21,10 @@ ul {
     line-height: 2em;
 } 
 
+//Defining the centered css class
+.centered {
+    @include centerer;
+}
 
 
 

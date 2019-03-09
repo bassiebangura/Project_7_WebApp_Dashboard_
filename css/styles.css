@@ -413,6 +413,11 @@ ul {
   line-height: 2em;
 }
 
+.centered {
+  margin: auto;
+  text-align: center;
+}
+
 .container {
   display: -ms-grid;
   display: grid;
@@ -423,59 +428,17 @@ ul {
       grid-template-areas: "banner" "main-nav" "main";
 }
 
-.flex--row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-@media (min-width: 769px) {
-  .flex--row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-}
-
-.centered {
-  margin: auto;
-  text-align: center;
-}
-
 .banner {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: banner;
 }
 
-.main-nav {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: main-nav;
-}
-
-.dashboard-heading-search {
-  grid-area: dashboard-heading-search;
+.new-members__card__details__name,
+.new-members__card__details__email,
+.new-members__card__signup-date {
+  margin: 0;
+  font-size: 0.8em;
 }
 
 .traffic-chart {
@@ -510,15 +473,14 @@ ul {
   grid-area: settings;
 }
 
-.new-members__card__details__name,
-.new-members__card__details__email,
-.new-members__card__signup-date {
-  margin: 0;
-  font-size: 0.8em;
+.main-nav {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: main-nav;
 }
 
-.banner-item {
-  display: inline-block;
+.dashboard-heading-search {
+  grid-area: dashboard-heading-search;
 }
 
 .blockquote {

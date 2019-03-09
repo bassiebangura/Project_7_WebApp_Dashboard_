@@ -1,3 +1,7 @@
-.banner-item {
-    display: inline-block;
+.main-nav {
+    grid-area: main-nav;
+}
+
+.dashboard-heading-search {
+    grid-area: dashboard-heading-search;
 }
