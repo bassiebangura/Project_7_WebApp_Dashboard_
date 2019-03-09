@@ -431,25 +431,14 @@ ul {
 @media (min-width: 340px) {
   .container {
     color: magenta;
-    -ms-grid-columns: 60px 1fr;
-        grid-template-columns: 60px 1fr;
+    -ms-grid-columns: 50px auto;
+        grid-template-columns: 50px auto;
     -ms-grid-rows: minmax(32px, auto);
         grid-template-rows: minmax(32px, auto);
         grid-template-areas: "banner banner" "main-nav main" "main-nav main";
   }
 }
 
-/* @media screen and (min-width: 400px) {
-    .container {
-        color: green;
-        grid-template-columns:60px 1fr;
-        grid-template-rows: minmax(32px, auto);
-        grid-template-areas: 
-        "banner banner"
-        "main-nav main"
-        "main-nav main";
-    }
-} */
 .banner {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -460,37 +449,71 @@ main {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: main;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(0, 1fr);
+      grid-template-columns: minmax(0, 1fr);
+  -ms-grid-rows: minmax(32px, auto);
+      grid-template-rows: minmax(32px, auto);
+      grid-template-areas: "dashboard-heading-search" "traffic-chart" "daily-traffic-chart" "mobile-users-chart" "social-stats" "new-members" "recent-activities" "message-user" "settings";
+}
+
+@media (min-width: 780px) {
+  main {
+    color: magenta;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: minmax(150px, auto);
+        grid-template-rows: minmax(150px, auto);
+        grid-template-areas: "dashboard-heading-search dashboard-heading-search" "traffic-chart traffic-chart" "daily-traffic-chart mobile-users-chart" "social-stats social-stats" "new-members recent-activities" "message-user settings";
+  }
 }
 
 .traffic-chart {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: traffic-chart;
 }
 
 .daily-traffic-chart {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: daily-traffic-chart;
 }
 
 .mobile-users-chart {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
   grid-area: mobile-users-chart;
 }
 
 .social-stats {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
   grid-area: social-stats;
 }
 
 .new-members {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
   grid-area: new-members;
 }
 
 .recent-activities {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
   grid-area: recent-activities;
 }
 
 .message-user {
+  -ms-grid-row: 8;
+  -ms-grid-column: 1;
   grid-area: message-user;
 }
 
 .settings {
+  -ms-grid-row: 9;
+  -ms-grid-column: 1;
   grid-area: settings;
 }
 
@@ -501,6 +524,8 @@ main {
 }
 
 .dashboard-heading-search {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: dashboard-heading-search;
 }
 
@@ -605,6 +630,8 @@ a:link {
 }
 
 .img--avatar {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
 }
 
