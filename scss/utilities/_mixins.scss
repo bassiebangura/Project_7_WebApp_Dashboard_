@@ -24,14 +24,6 @@
     }
   }
 
-//******** Grid Mixin ********
-@mixin grid(){
-    @for $i from 1 through 12 {
-        .grid__col--#{$i} {
-         width: ($i / 12) * 100%;
-        }
-    } 
-}
 
 //********** Centering Mixin ********
 @mixin centerer {
@@ -39,13 +31,7 @@
     text-align: center;
 }
 
-//******** Blockquote Mixin ********
-@mixin blockquotation {
-    border-left: 4px solid $block-quote-border;
-    padding: 0.4em;
-    border-radius: 0.2em;
-    @content;
-}
+
 
 @mixin btn(
     $background-color: null,

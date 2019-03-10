@@ -6,6 +6,8 @@
     "banner"
     "main-nav"
     "main";
+    
+    /** Media query for Tablets **/
     @include mq($xs) {
         color: magenta;
         grid-template-columns:50px auto;
@@ -16,6 +18,21 @@
         "main-nav main";
         
     }
+
+    /** Media Query for Desktop View **/
+    @include mq($md) {
+        width: 95%;
+        margin: auto;
+    }
 }
 
+
+.banner__container {
+    @include flexible($direction: row);
+    /*@include mq($sm) {
+            @include flexible($direction: row,
+                               $justify-content: center);
+            
+        }*/
+}
 

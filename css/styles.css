@@ -426,9 +426,11 @@ ul {
   -ms-grid-rows: minmax(32px, auto);
       grid-template-rows: minmax(32px, auto);
       grid-template-areas: "banner" "main-nav" "main";
+  /** Media query for Tablets **/
+  /** Media Query for Desktop View **/
 }
 
-@media (min-width: 340px) {
+@media (min-width: 576px) {
   .container {
     color: magenta;
     -ms-grid-columns: 50px auto;
@@ -439,10 +441,178 @@ ul {
   }
 }
 
+@media (min-width: 1024px) {
+  .container {
+    width: 95%;
+    margin: auto;
+  }
+}
+
+.banner__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  /*@include mq($sm) {
+            @include flexible($direction: row,
+                               $justify-content: center);
+            
+        }*/
+}
+
 .banner {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: banner;
+}
+
+.notification-icon {
+  margin-left: auto;
+  width: 40px;
+  height: 40px;
+}
+
+/** Section containing Dashboard Heading and Search Bar **/
+.dashboard-heading-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  /*@include mq($xs) {
+            @include flexible($direction: row,
+                               $justify-content: center);
+            
+        }*/
+}
+
+.search-bar {
+  margin-left: auto;
+}
+
+.dashboard-header {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/** Traffic Chart Section **/
+.traffic-chart {
+  text-align: center;
+}
+
+.traffic-chart__time-units {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+/** Daily Traffic Chart Section **/
+.daily-traffic-chart {
+  text-align: center;
+}
+
+.mobile-users {
+  text-align: center;
+}
+
+/** Social Stats Section **/
+.social-stats {
+  text-align: center;
+}
+
+.social-stats__container__twitter,
+.social-stats__container__facebook,
+.social-stats__container__google {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 1em auto;
+  background-color: #ddd;
+  border-radius: 5px;
+  width: 50%;
+  padding: 0.5em 0;
+}
+
+.social-stats__data > * {
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.social-stats__data {
+  padding-left: 1em;
+}
+
+/** Create blue background for social icons **/
+.social-icon-container {
+  border-radius: 50%;
+  background-color: blue;
+  width: 40px;
+  height: 40px;
+}
+
+/** Twitter Social Icon **/
+.social-icon-twitter {
+  position: relative;
+  top: 11px;
+  left: 1px;
+  width: 20px;
+  height: 20px;
+}
+
+/** Facebook Social Icon **/
+.social-icon-facebook {
+  position: relative;
+  top: 9px;
+  left: 1px;
+  width: 20px;
+  height: 20px;
+}
+
+/** Google Social Icon **/
+.social-icon-google {
+  position: relative;
+  top: 9px;
+  left: 1px;
+  width: 20px;
+  height: 20px;
 }
 
 main {
@@ -517,6 +687,7 @@ main {
   grid-area: settings;
 }
 
+/*** Defines name of grid areas within thee nav ***/
 .main-nav {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
@@ -529,21 +700,35 @@ main {
   grid-area: dashboard-heading-search;
 }
 
-.blockquote {
-  border-left: 4px solid #58E1C1;
-  padding: 0.4em;
-  border-radius: 0.2em;
+/*** Flex layout for main-nav ***/
+.main-nav__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  /*@include mq($xs) {
+            @include flexible($direction: row,
+                               $justify-content: center);
+            
+        }*/
+  width: 100%;
 }
 
 .headline--primary {
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 
 .headline--secondary {
-  font-weight: 100;
-  font-size: 1.2em;
-  padding-left: 1.2em;
-  margin-bottom: 1.5em;
+  font-size: 1.1em;
 }
 
 .link {
@@ -623,10 +808,9 @@ a:link {
   text-decoration: none;
 }
 
-.img--frame {
-  width: 100%;
-  padding: 0.75em;
-  border: 1px solid #ddd;
+.main-nav__icon {
+  margin-left: 0.7em;
+  margin-right: 0.7em;
 }
 
 .img--avatar {
@@ -640,24 +824,9 @@ a:link {
   height: 35%;
 }
 
-.icon {
-  width: 20px;
-  height: 20px;
-}
-
-.social-icon-container {
-  border-radius: 50%;
-  background-color: blue;
-  width: 40px;
-  height: 40px;
-}
-
-.social-icon {
-  position: relative;
-  top: 11px;
-  left: 10px;
-  width: 22px;
-  height: 22px;
+.main-nav__icon {
+  width: 32px;
+  height: 32px;
 }
 
 .st0 {

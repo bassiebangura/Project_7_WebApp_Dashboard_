@@ -1,3 +1,4 @@
+/*** Defines name of grid areas within thee nav ***/
 .main-nav {
     grid-area: main-nav;
 }
@@ -5,3 +6,16 @@
 .dashboard-heading-search {
     grid-area: dashboard-heading-search;
 }
+
+/*** Flex layout for main-nav ***/
+.main-nav__container {
+    @include flexible($direction: row,
+                      $justify-content: space-evenly);
+    /*@include mq($xs) {
+            @include flexible($direction: row,
+                               $justify-content: center);
+            
+        }*/
+    width: 100%;
+}
+
