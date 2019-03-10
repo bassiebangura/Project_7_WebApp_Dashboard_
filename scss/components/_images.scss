@@ -23,8 +23,13 @@
 .social-icon-container {
     border-radius: 50%;
     background-color: blue;
+    width: 40px;
+    height: 40px;
 }
 .social-icon {
+    position: relative;
+    top: 12px;
+    left: 12px;
     width: 16px;
     height: 16px;
 }
