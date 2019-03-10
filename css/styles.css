@@ -641,9 +641,18 @@ a:link {
 }
 
 .icon {
-  display: inline-block;
   width: 20px;
   height: 20px;
+}
+
+.social-icon-container {
+  border-radius: 50%;
+  background-color: blue;
+}
+
+.social-icon {
+  width: 16px;
+  height: 16px;
 }
 
 .st0 {
