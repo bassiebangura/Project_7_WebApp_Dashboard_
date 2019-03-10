@@ -36,6 +36,12 @@
 }
 
 /** Social Stats Section **/
+.social-stats__container {
+    /** Media Query **/
+    @include mq($xs) {
+    @include flexible($direction: row);
+    }
+}
 .social-stats {
     text-align: center;
 }
@@ -48,8 +54,13 @@
     margin: 1em auto;                   
     background-color: #ddd;
     border-radius: 5px;
-    width: 50%;
+    width: 45%;
     padding: 0.5em 0;
+    /** Media Query **/
+    @include mq($xs) {
+        width: 30%;
+    }
+
 }
 
 .social-stats__data > * {

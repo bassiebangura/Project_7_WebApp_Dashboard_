@@ -543,6 +543,28 @@ ul {
 }
 
 /** Social Stats Section **/
+.social-stats__container {
+  /** Media Query **/
+}
+
+@media (min-width: 576px) {
+  .social-stats__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
 .social-stats {
   text-align: center;
 }
@@ -566,8 +588,17 @@ ul {
   margin: 1em auto;
   background-color: #ddd;
   border-radius: 5px;
-  width: 50%;
+  width: 45%;
   padding: 0.5em 0;
+  /** Media Query **/
+}
+
+@media (min-width: 576px) {
+  .social-stats__container__twitter,
+  .social-stats__container__facebook,
+  .social-stats__container__google {
+    width: 30%;
+  }
 }
 
 .social-stats__data > * {
