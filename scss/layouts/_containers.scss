@@ -9,7 +9,6 @@
     
     /** Media query for Tablets **/
     @include mq($xs) {
-        color: magenta;
         grid-template-columns:50px auto;
         grid-template-rows: minmax(32px, auto);
         grid-template-areas: 

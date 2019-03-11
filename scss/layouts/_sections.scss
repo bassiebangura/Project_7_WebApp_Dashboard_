@@ -157,3 +157,13 @@
     margin-bottom: 0.5em;
 }
 
+/**** Settings ****/
+.settings__email,
+.settings__profile {
+    @include flexible($direction: row);
+}
+.switch {
+    margin-left: auto;
+    margin-top: 14px;
+}
+

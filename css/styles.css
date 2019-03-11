@@ -432,7 +432,6 @@ ul {
 
 @media (min-width: 576px) {
   .container {
-    color: magenta;
     -ms-grid-columns: 50px auto;
         grid-template-columns: 50px auto;
     -ms-grid-rows: minmax(32px, auto);
@@ -717,6 +716,29 @@ ul {
 
 .message-user__details__search {
   margin-bottom: 0.5em;
+}
+
+/**** Settings ****/
+.settings__email,
+.settings__profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.switch {
+  margin-left: auto;
+  margin-top: 14px;
 }
 
 main {
@@ -1027,6 +1049,78 @@ a:link {
   }
 }
 
+/**** TOGGLE SWITCH ****/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 24px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 3.5px;
+  background-color: white;
+  -webkit-transition: .3s;
+  transition: .3s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #8987ec;
+}
+
+input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #13171b;
+          box-shadow: 0 0 1px #13171b;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  transform: translateX(40px);
+}
+
+/*------ ADD ELEMENT WITH CSS ---------*/
+.slider:after {
+  content: 'OFF';
+  color: white;
+  display: block;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 60%;
+  font-size: 0.6em;
+  font-family: Verdana, sans-serif;
+}
+
+input:checked + .slider:after {
+  content: 'ON';
+  top: 50%;
+  left: 30%;
+}
+
+/*--------- END --------*/
 .form__label--hidden {
   display: none;
 }
