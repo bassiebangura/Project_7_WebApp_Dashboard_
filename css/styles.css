@@ -538,7 +538,7 @@ ul {
   text-align: center;
 }
 
-.mobile-users {
+.mobile-users-chart {
   text-align: center;
 }
 
@@ -644,6 +644,79 @@ ul {
   left: 1px;
   width: 20px;
   height: 20px;
+}
+
+/**** New Members Section ****/
+.new-members {
+  text-align: center;
+}
+
+.new-members__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  text-align: left;
+}
+
+.new-members__card__details > * {
+  margin: 0 0.5em;
+}
+
+.new-members__card__signup-date {
+  margin: 0 0.5em;
+}
+
+/**** Recent Activities ****/
+.recent-activities {
+  text-align: center;
+}
+
+.more-details {
+  display: none;
+}
+
+.recent-activities__details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  text-align: left;
+}
+
+.recent-activities__details__activity > * {
+  margin: 0 0.5em;
+}
+
+/**** Message User ****/
+/*.message-user {
+    width: 95%;
+    margin: auto;
+}*/
+.message-user__details > * {
+  width: 100%;
+}
+
+.message-user__details__search {
+  margin-bottom: 0.5em;
 }
 
 main {

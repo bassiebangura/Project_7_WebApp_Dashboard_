@@ -31,7 +31,7 @@
     text-align: center;
 }
 
-.mobile-users {
+.mobile-users-chart {
     text-align: center;
 }
 
@@ -109,4 +109,51 @@
     height: 20px;
 }
 
+/**** New Members Section ****/
+.new-members {
+    text-align: center;
+}
+.new-members__card {
+    @include flexible($direction: row);
+    text-align: left;
+}
+
+.new-members__card__details > * {
+    margin: 0 0.5em;
+}
+
+.new-members__card__signup-date {
+    margin: 0 0.5em;
+}
+
+/**** Recent Activities ****/
+.recent-activities {
+    text-align: center;
+}
+.more-details {
+    display: none;
+}
+
+.recent-activities__details {
+    @include flexible($direction: row);
+    text-align: left;
+    
+}
+
+.recent-activities__details__activity > * {
+    margin: 0 0.5em;
+}
+
+/**** Message User ****/
+/*.message-user {
+    width: 95%;
+    margin: auto;
+}*/
+.message-user__details > * {
+    width: 100%;
+}
+
+.message-user__details__search {
+    margin-bottom: 0.5em;
+}
 
