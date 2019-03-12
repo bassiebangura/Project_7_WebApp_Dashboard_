@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <?xml version="1.0" encoding="utf-8"?>
   </head>
   <body class="container">
@@ -113,10 +114,10 @@
         <p>Alert! This is wwhat you need to know.</p>
         <h4 class="headline--secondary ">TRAFFIC</h4>
         <ul class="web-traffic-chart__time-units">
-          <li>Hourly</li>
+          <li id="hourly">Hourly</li>
           <li>Daily</li>
           <li>Weekly</li>
-          <li>Monthly</li>
+          <li id="monthly">Monthly</li>
         </ul>
         <div class="web-traffic-chart__figure-wrapper">
             <canvas id="web-traffic-chart__figure">

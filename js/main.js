@@ -1,39 +1,52 @@
 /**************************************************************
                     WEB TRAFFIC  CHART                         
 ****************************************************************/
-let WebTrafficWeeklyLabels = ['9-15', '16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17'];
-let WebTrafficWeeklyData = ['1', '8', '10', '10', '9', '7', '5', '6', '8', '3'];
-//var rain_dataset = ['0', '0', '6', '32', '7', '2'];
+let webTrafficWeeklyLabels = ['9-15', '16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17'];
+let webTrafficWeeklyData = ['1', '8', '10', '10', '9', '7', '5', '6', '8', '3'];
+
+let webTrafficMonthlyLabels = ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug', 'Sep', 'Nov', 'Dec'];
+let webTrafficMonthlyData = ['1', '8', '10', '10', '9', '7', '5', '6', '8', '3', '6', '13', '6'];
+
 const webTrafficChartCanvas = document.getElementById("web-traffic-chart__figure").getContext('2d');
 let webTrafficChartConfig = {
     type: 'bar',
     data: {
-        labels: WebTrafficWeeklyLabels,
+        labels: webTrafficWeeklyLabels,
         datasets: [{
             type: 'line',
             label: "Temperature (Celsius)",
-            data: WebTrafficWeeklyData,
+            data: webTrafficWeeklyData
         }]
+    },
+    options: {
+        elements: {
+            line: {
+                tension: 0 // disables bezier curves
+            }
+        }
     }
 };
-let webTrafficChart = new Chart(webTrafficChartCanvas, webTrafficChartConfig);
-/*$("#0").click(function() {
-    var data = forecast_chart.config.data;
-    data.datasets[0].data = temp_dataset;
-    data.datasets[1].data = rain_dataset;
-    data.labels = chart_labels;
-    forecast_chart.update();
+const webTrafficChart = new Chart(webTrafficChartCanvas, webTrafficChartConfig);
+console.log(webTrafficChart);
+$("#monthly").click(function() {
+    let data = webTrafficChart.config.data;
+    data.labels = webTrafficMonthlyLabels
+    data.datasets[0].data = webTrafficMonthlyData
+    webTrafficChart.update();
 });
-$("#1").click(function() {
-    var chart_labels = ['00:00', '03:00', '06:00', '09:00', '12:00', '15:00', '18:00', '21:00'];
-    var temp_dataset = ['5', '3', '4', '8', '10', '11', '10', '9'];
-    var rain_dataset = ['0', '0', '1', '4', '19', '19', '7', '2'];
-    var data = forecast_chart.config.data;
-    data.datasets[0].data = temp_dataset;
-    data.datasets[1].data = rain_dataset;
-    data.labels = chart_labels;
-    forecast_chart.update();
-});   **/
+
+/*
+$("#hourly").click(function() {
+    let oldData = webTrafficChart.config.data;
+    console.log(oldData)
+    //data.datasets[0].data = temp_dataset;
+    //data.datasets[1].data = rain_dataset;
+    //data.labels = chart_labels;
+    //forecast_chart.update();
+});  
+
+*/
+
 /**************************************************************
                      MOBILE USESERS CHART
 ***************************************************************/
