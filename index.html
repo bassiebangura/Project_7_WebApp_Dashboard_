@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
-    <script class="js/main.js"></script>
     <?xml version="1.0" encoding="utf-8"?>
   </head>
   <body class="container">
@@ -119,18 +118,24 @@
           <li>Weekly</li>
           <li>Monthly</li>
         </ul>
-        <canvas>
-        </canvas>
+        <div class="traffic-chart__figure-wrapper">
+            <canvas id="traffic-chart__figure">
+            </canvas>
+        </div>
       </section>
       <section class="daily-traffic-chart">
         <h4 class="headline--secondary">DAILY TRAFFIC</h4>
-        <canvas>
-        </canvas>
+        <div class="daily-traffic-chart__figure-wrapper">
+          <canvas id="daily-traffic-chart__figure">
+          </canvas>
+        </div>
       </section>
       <section class="mobile-users-chart">
         <h4 class="headline--secondary">MOBILE USERS</h4>
-        <canvas>
-        </canvas>
+        <div class="mobiles-users-chart__figure-wrapper">
+            <canvas id="mobile-users-chart__figure">
+            </canvas>
+        </div>
       </section>
       <section class="social-stats">
         <h4 class="headline--secondary">SOCIAL STATS</h4>
@@ -251,5 +256,6 @@
         </div>
       </section>
     </main>
+    <script src="js/main.js"></script>
   </body>
 </html>
