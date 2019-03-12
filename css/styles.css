@@ -512,11 +512,11 @@ ul {
 }
 
 /** Traffic Chart Section **/
-.traffic-chart {
+.web-traffic-chart {
   text-align: center;
 }
 
-.traffic-chart__time-units {
+.web-traffic-chart__time-units {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -751,7 +751,7 @@ main {
       grid-template-columns: minmax(0, 1fr);
   -ms-grid-rows: minmax(32px, auto);
       grid-template-rows: minmax(32px, auto);
-      grid-template-areas: "dashboard-heading-search" "traffic-chart" "daily-traffic-chart" "mobile-users-chart" "social-stats" "new-members" "recent-activities" "message-user" "settings";
+      grid-template-areas: "dashboard-heading-search" "web-traffic-chart" "daily-traffic-chart" "mobile-users-chart" "social-stats" "new-members" "recent-activities" "message-user" "settings";
 }
 
 @media (min-width: 780px) {
@@ -761,14 +761,14 @@ main {
         grid-template-columns: 1fr 1fr;
     -ms-grid-rows: minmax(150px, auto);
         grid-template-rows: minmax(150px, auto);
-        grid-template-areas: "dashboard-heading-search dashboard-heading-search" "traffic-chart traffic-chart" "daily-traffic-chart mobile-users-chart" "social-stats social-stats" "new-members recent-activities" "message-user settings";
+        grid-template-areas: "dashboard-heading-search dashboard-heading-search" "web-traffic-chart web-traffic-chart" "daily-traffic-chart mobile-users-chart" "social-stats social-stats" "new-members recent-activities" "message-user settings";
   }
 }
 
-.traffic-chart {
+.web-traffic-chart {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  grid-area: traffic-chart;
+  grid-area: web-traffic-chart;
 }
 
 .daily-traffic-chart {

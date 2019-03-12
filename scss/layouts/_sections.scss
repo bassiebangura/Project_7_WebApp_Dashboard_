@@ -18,10 +18,10 @@
 }
 
 /** Traffic Chart Section **/
-.traffic-chart {
+.web-traffic-chart {
     text-align: center;
 }
-.traffic-chart__time-units {
+.web-traffic-chart__time-units {
     @include flexible($direction: row,
                        $justify-content: space-evenly)
 }
