@@ -41,35 +41,83 @@ let webTrafficChartConfig = {
 const webTrafficChart = new Chart(webTrafficChartCanvas, webTrafficChartConfig);
 
 /****** Handling Click That Changes Dataset For Web Traffic Chart ********/
+const changeBackgroundOfSelectedElement = (classList)  => {
+    
+    classList.each(function (i) {
+        if ( $(this).hasClass("traffic-type-selected")) {
+            $(this).removeClass("traffic-type-selected")
+        } 
+        $target = $(event.target);   
+        $target.addClass('traffic-type-selected');
+    });
+}
 
-/******** Set Hourly Web  *********/
-$("#hourly").click(function() {
+/******** Set Hourly Web Traffic  *********/
+$("#hourly").click(function(event) {
     let data = webTrafficChart.config.data;
     data.labels = webTrafficHourlyLabels
     data.datasets[0].data = webTrafficHourlyData
     webTrafficChart.update();
-    
+    let classListOfElements = $(".web-traffic-chart__type");
+
+    changeBackgroundOfSelectedElement(classListOfElements);
 });
 
+/******** Set Daily Web Traffic  *********/
 $("#daily").click(function() {
     let data = webTrafficChart.config.data;
     data.labels = webTrafficDailyLabels
     data.datasets[0].data = webTrafficDailyData
     webTrafficChart.update();
+    let classListOfElements = $(".web-traffic-chart__type");
+
+    classListOfElements.each(function (i) {
+        if ( $(this).hasClass("traffic-type-selected")) {
+            console.log("i have been selected")
+            $(this).removeClass("traffic-type-selected")
+        } 
+        $target = $(event.target);   
+        $target.addClass('traffic-type-selected');
+    });
+    
+    /*$target = $(event.target);   
+    $target.addClass('traffic-type-selected');*/
 });
 
+/******** Set Weekly Web Traffic  *********/
 $("#weekly").click(function() {
     let data = webTrafficChart.config.data;
     data.labels = webTrafficWeeklyLabels
     data.datasets[0].data = webTrafficWeeklyData
     webTrafficChart.update();
+    let classListOfElements = $(".web-traffic-chart__type");
+
+    classListOfElements.each(function (i) {
+        if ( $(this).hasClass("traffic-type-selected")) {
+            console.log("i have been selected")
+            $(this).removeClass("traffic-type-selected")
+        } 
+        $target = $(event.target);   
+        $target.addClass('traffic-type-selected');
+    });
 });
 
+/******** Set Monthly Web Traffic  *********/
 $("#monthly").click(function() {
     let data = webTrafficChart.config.data;
     data.labels = webTrafficMonthlyLabels
     data.datasets[0].data = webTrafficMonthlyData
     webTrafficChart.update();
+    let classListOfElements = $(".web-traffic-chart__type");
+
+    classListOfElements.each(function (i) {
+        if ( $(this).hasClass("traffic-type-selected")) {
+            console.log("i have been selected")
+            $(this).removeClass("traffic-type-selected")
+        } 
+        $target = $(event.target);   
+        $target.addClass('traffic-type-selected');
+    });
 });
 
 
