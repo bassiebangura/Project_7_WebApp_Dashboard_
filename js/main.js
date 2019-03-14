@@ -1,21 +1,33 @@
 /**************************************************************
                     WEB TRAFFIC  CHART                         
-****************************************************************/
+****************************************************************/ 
+/**********     WEB TRAFFIC HOURLY LABELS AND DATA     ********/
+let webTrafficHourlyLabels = ['01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00'];
+let webTrafficHourlyData = ['1', '8', '10', '10', '9', '7', '5', '6', '8', '3'];
+
+
+/**********     WEB TRAFFIC DAILY LABELS AND DATA     ********/
+let webTrafficDailyLabels = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+let webTrafficDailyData = ['4', '8', '10', '6', '9', '7', '5'];
+
+/**********     WEB TRAFFIC WEEKLY LABELS AND DATA     ********/
 let webTrafficWeeklyLabels = ['9-15', '16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17'];
 let webTrafficWeeklyData = ['1', '8', '10', '10', '9', '7', '5', '6', '8', '3'];
 
+/**********     WEB TRAFFIC MONTHLY LABELS AND DATA     ********/
 let webTrafficMonthlyLabels = ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug', 'Sep', 'Nov', 'Dec'];
 let webTrafficMonthlyData = ['1', '8', '10', '10', '9', '7', '5', '6', '8', '3', '6', '13', '6'];
+
 
 const webTrafficChartCanvas = document.getElementById("web-traffic-chart__figure").getContext('2d');
 let webTrafficChartConfig = {
     type: 'bar',
     data: {
-        labels: webTrafficWeeklyLabels,
+        labels: webTrafficHourlyLabels,
         datasets: [{
             type: 'line',
             label: "Temperature (Celsius)",
-            data: webTrafficWeeklyData
+            data: webTrafficHourlyData
         }]
     },
     options: {
@@ -27,7 +39,32 @@ let webTrafficChartConfig = {
     }
 };
 const webTrafficChart = new Chart(webTrafficChartCanvas, webTrafficChartConfig);
-console.log(webTrafficChart);
+
+/****** Handling Click That Changes Dataset For Web Traffic Chart ********/
+
+/******** Set Hourly Web  *********/
+$("#hourly").click(function() {
+    let data = webTrafficChart.config.data;
+    data.labels = webTrafficHourlyLabels
+    data.datasets[0].data = webTrafficHourlyData
+    webTrafficChart.update();
+    
+});
+
+$("#daily").click(function() {
+    let data = webTrafficChart.config.data;
+    data.labels = webTrafficDailyLabels
+    data.datasets[0].data = webTrafficDailyData
+    webTrafficChart.update();
+});
+
+$("#weekly").click(function() {
+    let data = webTrafficChart.config.data;
+    data.labels = webTrafficWeeklyLabels
+    data.datasets[0].data = webTrafficWeeklyData
+    webTrafficChart.update();
+});
+
 $("#monthly").click(function() {
     let data = webTrafficChart.config.data;
     data.labels = webTrafficMonthlyLabels
@@ -35,17 +72,6 @@ $("#monthly").click(function() {
     webTrafficChart.update();
 });
 
-/*
-$("#hourly").click(function() {
-    let oldData = webTrafficChart.config.data;
-    console.log(oldData)
-    //data.datasets[0].data = temp_dataset;
-    //data.datasets[1].data = rain_dataset;
-    //data.labels = chart_labels;
-    //forecast_chart.update();
-});  
-
-*/
 
 /**************************************************************
                      MOBILE USESERS CHART
