@@ -41,7 +41,9 @@ let webTrafficChartConfig = {
 const webTrafficChart = new Chart(webTrafficChartCanvas, webTrafficChartConfig);
 
 /****** Handling Click That Changes Dataset For Web Traffic Chart ********/
-const changeBackgroundOfSelectedElement = (classList)  => {
+
+/** function handles changes to background of selected web traffic time units **/
+const changeBackgroundColorOfSelectedTrafficTimeUnit = (classList)  => {
     
     classList.each(function (i) {
         if ( $(this).hasClass("traffic-type-selected")) {
@@ -60,7 +62,7 @@ $("#hourly").click(function(event) {
     webTrafficChart.update();
     let classListOfElements = $(".web-traffic-chart__type");
 
-    changeBackgroundOfSelectedElement(classListOfElements);
+    changeBackgroundColorOfSelectedTrafficTimeUnit(classListOfElements);
 });
 
 /******** Set Daily Web Traffic  *********/
@@ -71,17 +73,7 @@ $("#daily").click(function() {
     webTrafficChart.update();
     let classListOfElements = $(".web-traffic-chart__type");
 
-    classListOfElements.each(function (i) {
-        if ( $(this).hasClass("traffic-type-selected")) {
-            console.log("i have been selected")
-            $(this).removeClass("traffic-type-selected")
-        } 
-        $target = $(event.target);   
-        $target.addClass('traffic-type-selected');
-    });
-    
-    /*$target = $(event.target);   
-    $target.addClass('traffic-type-selected');*/
+    changeBackgroundColorOfSelectedTrafficTimeUnit(classListOfElements);
 });
 
 /******** Set Weekly Web Traffic  *********/
@@ -92,14 +84,7 @@ $("#weekly").click(function() {
     webTrafficChart.update();
     let classListOfElements = $(".web-traffic-chart__type");
 
-    classListOfElements.each(function (i) {
-        if ( $(this).hasClass("traffic-type-selected")) {
-            console.log("i have been selected")
-            $(this).removeClass("traffic-type-selected")
-        } 
-        $target = $(event.target);   
-        $target.addClass('traffic-type-selected');
-    });
+    changeBackgroundColorOfSelectedTrafficTimeUnit(classListOfElements);
 });
 
 /******** Set Monthly Web Traffic  *********/
@@ -110,14 +95,7 @@ $("#monthly").click(function() {
     webTrafficChart.update();
     let classListOfElements = $(".web-traffic-chart__type");
 
-    classListOfElements.each(function (i) {
-        if ( $(this).hasClass("traffic-type-selected")) {
-            console.log("i have been selected")
-            $(this).removeClass("traffic-type-selected")
-        } 
-        $target = $(event.target);   
-        $target.addClass('traffic-type-selected');
-    });
+    changeBackgroundColorOfSelectedTrafficTimeUnit(classListOfElements);
 });
 
 
