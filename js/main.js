@@ -40,7 +40,10 @@ let webTrafficChartConfig = {
 };
 const webTrafficChart = new Chart(webTrafficChartCanvas, webTrafficChartConfig);
 
-/****** Handling Click That Changes Dataset For Web Traffic Chart ********/
+/************************************************************************************************
+ Handling Click That Changes Dataset For Web Traffic Chart And background color for selected item.
+         
+**************************************************************************************************/
 
 /** function handles changes to background of selected web traffic time units **/
 const changeBackgroundColorOfSelectedTrafficTimeUnit = (classList)  => {
