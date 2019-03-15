@@ -11,11 +11,17 @@
 .main-nav__container {
     @include flexible($direction: row,
                       $justify-content: space-evenly);
-    /*@include mq($xs) {
-            @include flexible($direction: row,
-                               $justify-content: center);
+    @include mq($xs) {
+            @include flexible($direction: column,
+                               $justify-content: flex-start);
             
-        }*/
+        }
     width: 100%;
+}
+
+.main-nav__icon {
+    @include mq($xs) {
+        margin-bottom: 1em;
+    }
 }
 
