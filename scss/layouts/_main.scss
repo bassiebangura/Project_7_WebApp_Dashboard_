@@ -16,7 +16,7 @@ main {
     @include mq($sm) {
         color: magenta;
         grid-template-columns:1fr 1fr;
-        grid-template-rows: minmax(150px, auto);
+        grid-template-rows: minmax(40px, auto);
         grid-template-areas: 
             "dashboard-heading-search dashboard-heading-search"
             "web-traffic-chart web-traffic-chart"
