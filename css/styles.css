@@ -691,13 +691,54 @@ ul {
   margin: 0 0.5em;
 }
 
+@media (min-width: 576px) {
+  .new-members__card__signup-date {
+    margin-left: auto;
+    /*move element with date to xtreme right */
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+@media (min-width: 576px) {
+  .new-members__card__info-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    background-color: lightblue;
+    width: 100%;
+  }
+}
+
 /**** Recent Activities ****/
 .recent-activities {
   text-align: center;
 }
 
 .more-details {
-  display: none;
+  display: inline-block;
+  padding: 0.7em;
+  font-size: 1em;
+  color: red;
+}
+
+@media (min-width: 576px) {
+  .more-details {
+    margin-left: auto;
+    /*move arrow icon to xtreme right */
+    margin-top: auto;
+    margin-bottom: auto;
+  }
 }
 
 .recent-activities__details {
@@ -719,6 +760,26 @@ ul {
 
 .recent-activities__details__activity > * {
   margin: 0 0.5em;
+}
+
+@media (min-width: 576px) {
+  .recent-activities__details__info-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    background-color: lightblue;
+    width: 100%;
+  }
 }
 
 /**** Message User ****/

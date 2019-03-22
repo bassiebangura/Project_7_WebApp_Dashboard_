@@ -5,6 +5,8 @@
     <title>DashBoard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.0/css/all.css">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <?xml version="1.0" encoding="utf-8"?>
@@ -202,12 +204,12 @@
         <h4 class="headline--secondary">NEW MEMBERS</h4>
         <div class="new-members__card">
           <img class="img--avatar" src="images/member-1.jpg"  class="img--avatar new-members__card__image"/>
-          <div class="new-member">
+          <div class="new-members__card__info-container">
             <div class="new-members__card__details">
               <p class="new-members__card__details__name">Victor Chambers</p>
               <p class="new-members__card__details__email">victorchambers@gmail.com</p>
             </div>
-            <p class="new-members__card__signup-date">10/10/19</p>
+            <p class="new-members__card__signup-date shift-far-right">10/10/19</p>
           </div>
         </div>
       </section>
@@ -215,11 +217,13 @@
         <h4 class="headline--secondary">RECENT ACTIVITIES</h4>
         <div class="recent-activities__details">
           <img class="img--avatar" src="images/member-1.jpg"/>
-          <div class="recent-activities__details__activity">
-            <p>Victor Chambers worked on SEO's.</p>
-            <p>4 hours</p>
+          <div class="recent-activities__details__info-container">
+            <div class="recent-activities__details__activity">
+              <p>Victor Chambers worked on SEO's.</p>
+              <p>4 hours</p>
+            </div>
+            <i class="fa fa-angle-right more-details shift-far-right"></i>
           </div>
-          <div class="more-details">More Details</div> 
         </div>
       </section>
       <section class="message-user">
