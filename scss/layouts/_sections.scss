@@ -150,11 +150,10 @@
     padding: 0.7em;
     font-size: 1em;
     color: red;
-    @include mq($xs) {
-        margin-left: auto; /*move arrow icon to xtreme right */
-        margin-top: auto;
-        margin-bottom: auto;
-    }
+    margin-left: auto; /*move arrow icon to xtreme right */
+    margin-top: auto;
+    margin-bottom: auto;
+    
 }
 
 .recent-activities__details {
@@ -167,30 +166,52 @@
     margin: 0 0.5em;
 }
 
-@include mq($xs) {
-    //introduce flexible layout in order to move .new-members__card__signup-date to the xtreme right
-    .recent-activities__details__info-container {
-        @include flexible($direction: row);
-        background-color: lightblue;
-        width: 100%;
 
-    }
+.recent-activities__details__info-container {
+    @include flexible($direction: row);
+    background-color: lightblue;
+    width: 100%;    
 }
 
 /**** Message User ****/
-/*.message-user {
-    width: 95%;
-    margin: auto;
-}*/
+.message-user {
+    @include flexible($direction: column);
+}
+
+.message-user > * {
+    width: 100%;
+}
+
+.message-user__details {
+    @include flexible($direction: column);
+    margin-top: auto;
+    
+}
 .message-user__details > * {
     width: 100%;
 }
+
+.message-user__details__textarea {
+    height: 140px;
+}
+
 
 .message-user__details__search {
     margin-bottom: 0.5em;
 }
 
+.message-user__send-button {
+    margin-top: auto;
+}
+
 /**** Settings ****/
+.settings {
+    @include flexible($direction: column);
+
+}
+.settings > * {
+    width: 100%;
+}
 .settings__email,
 .settings__profile {
     @include flexible($direction: row);
@@ -200,3 +221,17 @@
     margin-top: 14px;
 }
 
+.settings__buttons {
+    @include flexible($direction: column);
+    width: 100%;
+    margin-top: auto;
+
+}
+.settings__buttons__save,
+.settings__buttons__cancel {
+    margin-top: 1em;
+}
+/** sets element width to 100% **/
+.full-width {
+    width: 100%;
+}

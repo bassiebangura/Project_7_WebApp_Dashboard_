@@ -730,15 +730,10 @@ ul {
   padding: 0.7em;
   font-size: 1em;
   color: red;
-}
-
-@media (min-width: 576px) {
-  .more-details {
-    margin-left: auto;
-    /*move arrow icon to xtreme right */
-    margin-top: auto;
-    margin-bottom: auto;
-  }
+  margin-left: auto;
+  /*move arrow icon to xtreme right */
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .recent-activities__details {
@@ -762,40 +757,99 @@ ul {
   margin: 0 0.5em;
 }
 
-@media (min-width: 576px) {
-  .recent-activities__details__info-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    background-color: lightblue;
-    width: 100%;
-  }
+.recent-activities__details__info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background-color: lightblue;
+  width: 100%;
 }
 
 /**** Message User ****/
-/*.message-user {
-    width: 95%;
-    margin: auto;
-}*/
+.message-user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.message-user > * {
+  width: 100%;
+}
+
+.message-user__details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: auto;
+}
+
 .message-user__details > * {
   width: 100%;
+}
+
+.message-user__details__textarea {
+  height: 140px;
 }
 
 .message-user__details__search {
   margin-bottom: 0.5em;
 }
 
+.message-user__send-button {
+  margin-top: auto;
+}
+
 /**** Settings ****/
+.settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.settings > * {
+  width: 100%;
+}
+
 .settings__email,
 .settings__profile {
   display: -webkit-box;
@@ -816,6 +870,34 @@ ul {
 .switch {
   margin-left: auto;
   margin-top: 14px;
+}
+
+.settings__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  margin-top: auto;
+}
+
+.settings__buttons__save,
+.settings__buttons__cancel {
+  margin-top: 1em;
+}
+
+/** sets element width to 100% **/
+.full-width {
+  width: 100%;
 }
 
 main {
