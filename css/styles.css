@@ -395,15 +395,14 @@ th {
   padding: 0;
 }
 
-* {
-  border: 1px solid red;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -o-box-sizing: border-box;
-}
-
+/* {
+    border: 1px solid red; //for debug tools
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+} */
 ul {
   list-style: none;
   padding: 0;
@@ -472,6 +471,7 @@ ul {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: banner;
+  background-color: #3385c6;
 }
 
 .appName {
@@ -488,7 +488,7 @@ ul {
 .profilePicAndName {
   margin-left: 0.5em;
   padding-left: 0.5em;
-  border-left: 1px solid blue;
+  border-left: 1px solid #36454f;
 }
 
 .profileName {
@@ -601,7 +601,8 @@ ul {
       -ms-flex-align: start;
           align-items: flex-start;
   margin: 1em auto;
-  background-color: #ddd;
+  background-color: #eee;
+  border: 1px solid #ddd;
   border-radius: 5px;
   width: 45%;
   padding: 0.5em 0;
@@ -629,7 +630,7 @@ ul {
 /** Create blue background for social icons **/
 .social-icon-container {
   border-radius: 50%;
-  background-color: blue;
+  background-color: #3385c6;
   width: 40px;
   height: 40px;
 }
@@ -664,6 +665,7 @@ ul {
 /**** New Members Section ****/
 .new-members {
   text-align: center;
+  border-top: 1px solid #ccc;
 }
 
 .new-members__card {
@@ -715,7 +717,6 @@ ul {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    background-color: lightblue;
     width: 100%;
   }
 }
@@ -729,7 +730,7 @@ ul {
   display: inline-block;
   padding: 0.7em;
   font-size: 1em;
-  color: red;
+  color: #3385c6;
   margin-left: auto;
   /*move arrow icon to xtreme right */
   margin-top: auto;
@@ -771,7 +772,6 @@ ul {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  background-color: lightblue;
   width: 100%;
 }
 
@@ -915,7 +915,6 @@ main {
 
 @media (min-width: 780px) {
   main {
-    color: magenta;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     -ms-grid-rows: minmax(40px, auto);
@@ -983,6 +982,7 @@ main {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: main-nav;
+  background-color: #36454f;
 }
 
 .dashboard-heading-search {
@@ -1146,91 +1146,6 @@ a:link {
 .bell-icon {
   width: 20px;
   height: 20px;
-}
-
-.btn--default {
-  text-transform: uppercase;
-  width: 100%;
-  background-color: #51DDFC;
-  border: none;
-  border-radius: 0.25em;
-  padding: 0.75em;
-  margin-top: 0.8em;
-  color: white;
-}
-
-@media (min-width: 780px) {
-  .btn--default {
-    margin-right: 0.5%;
-  }
-}
-
-.btn--success {
-  text-transform: uppercase;
-  width: 100%;
-  background-color: #63CC82;
-  border: none;
-  border-radius: 0.25em;
-  padding: 0.75em;
-  margin-top: 0.8em;
-  color: white;
-}
-
-@media (min-width: 780px) {
-  .btn--success {
-    margin-right: 0.5%;
-  }
-}
-
-.btn--error {
-  text-transform: uppercase;
-  width: 100%;
-  background-color: #E4757A;
-  border: none;
-  border-radius: 0.25em;
-  padding: 0.75em;
-  margin-top: 0.8em;
-  color: white;
-}
-
-@media (min-width: 780px) {
-  .btn--error {
-    margin-right: 0.5%;
-  }
-}
-
-.btn--warning {
-  text-transform: uppercase;
-  width: 100%;
-  background-color: #FD7856;
-  border: none;
-  border-radius: 0.25em;
-  padding: 0.75em;
-  margin-top: 0.8em;
-  color: white;
-}
-
-@media (min-width: 780px) {
-  .btn--warning {
-    margin-right: 0.5%;
-  }
-}
-
-.btn--info {
-  text-transform: uppercase;
-  width: 100%;
-  background-color: #927BC1;
-  border: none;
-  border-radius: 0.25em;
-  padding: 0.75em;
-  margin-top: 0.8em;
-  color: white;
-}
-
-@media (min-width: 780px) {
-  .btn--info {
-    margin-right: 0.5%;
-  }
 }
 
 /**** TOGGLE SWITCH ****/

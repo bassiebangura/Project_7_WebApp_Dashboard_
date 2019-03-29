@@ -52,7 +52,8 @@
     @include flexible($direction: row,
                        $justify-content: center);
     margin: 1em auto;                   
-    background-color: #ddd;
+    background-color: #eee;
+    border: 1px solid #ddd;
     border-radius: 5px;
     width: 45%;
     padding: 0.5em 0;
@@ -76,7 +77,7 @@
 /** Create blue background for social icons **/
 .social-icon-container {
     border-radius: 50%;
-    background-color: blue;
+    background-color: $banner-bg;
     width: 40px;
     height: 40px;
 }
@@ -112,6 +113,7 @@
 /**** New Members Section ****/
 .new-members {
     text-align: center;
+    border-top: 1px solid $border-line;
 }
 .new-members__card {
     @include flexible($direction: row);
@@ -135,7 +137,6 @@
     //introduce flexible layout in order to move .new-members__card__signup-date to the xtreme right
     .new-members__card__info-container {
         @include flexible($direction: row);
-        background-color: lightblue;
         width: 100%;
 
     }
@@ -149,7 +150,7 @@
     display: inline-block;
     padding: 0.7em;
     font-size: 1em;
-    color: red;
+    color: $banner-bg;
     margin-left: auto; /*move arrow icon to xtreme right */
     margin-top: auto;
     margin-bottom: auto;
@@ -169,7 +170,6 @@
 
 .recent-activities__details__info-container {
     @include flexible($direction: row);
-    background-color: lightblue;
     width: 100%;    
 }
 
