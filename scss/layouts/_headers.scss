@@ -1,6 +1,11 @@
 .banner {
     grid-area: banner;
     background-color: $banner-bg;
+    padding: 0.2em 0.8em 0.2em 0.6em;
+}
+
+.banner__container {
+    margin: 0;
 }
 
 .appName {
@@ -17,11 +22,11 @@
 .profilePicAndName {
     margin-left: 0.5em;
     padding-left: 0.5em;
-    border-left: 1px solid $nav-bg;
+    border-left: 0.5px solid $nav-bg;
 }
 .profileName {
     position: relative;
-    bottom: 12px;
+    bottom: 8px;
 }
 
 

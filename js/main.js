@@ -107,7 +107,7 @@ $("#monthly").click(function() {
 ***************************************************************/
 let usersDeviceTypeLabels = ["Phone", "Tablets", "Desktop"]
 let usersDeviceTypeData =[5, 10, 25]
-let mobileUsersChartBackgroundColor =  ['rgba(255, 0, 0)', 'rgba(0, 255, 0)', 'rgba(0, 0, 255)']
+let mobileUsersChartBackgroundColor =  ['rgb(0, 91, 150)', 'rgba(0, 255, 0)', 'rgba(0, 0, 255)']
 let mobileUsersChartCanvas = document.getElementById("mobile-users-chart__figure").getContext('2d');
 let mobileUsersChartConfig = {
     type: 'doughnut',
@@ -132,13 +132,13 @@ let mobileUsersChart = new Chart(mobileUsersChartCanvas, mobileUsersChartConfig)
 ***************************************************************/
 let dayOfWeek = ["S", "M", "T", "W", "T", "F", "S"]
 let dailyData =[50, 100, 75, 80, 60, 40, 90]
-let dailyTrafficChartBackgroundColor =  ['rgb(0, 0, 255)', 
-                                        'rgb(0, 0, 255)', 
-                                        'rgb(0, 0, 255)', 
-                                        'rgb(0, 0, 255)', 
-                                        'rgb(0, 0, 255)', 
-                                        'rgb(0, 0, 255)',
-                                        'rgb(0, 0, 255)']
+let dailyTrafficChartBackgroundColor =  ['rgb(0, 91, 150)', 
+                                        'rgb(0, 91, 150)', 
+                                        'rgb(0, 91, 150)', 
+                                        'rgb(0, 91, 150)', 
+                                        'rgb(0, 91, 150)', 
+                                        'rgb(0, 91, 150)',
+                                        'rgb(0, 91, 150)']
 let dailyTrafficChartCanvas = document.getElementById("daily-traffic-chart__figure").getContext('2d');
 /**** Options settings for dailyTrafficChartOption ****/
 let dailyTrafficChartOptionsSettings = {

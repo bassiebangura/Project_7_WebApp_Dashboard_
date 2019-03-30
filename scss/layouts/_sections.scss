@@ -6,6 +6,7 @@
                                $justify-content: center);
             
         }*/
+    padding: 0.6em 0.6em 0.8em 0.6em;
 }
 
 .search-bar {
@@ -20,19 +21,59 @@
 /** Traffic Chart Section **/
 .web-traffic-chart {
     text-align: center;
+    padding: 0.9em;
+}
+.alert {
+    font-weight: bold;
+}
+.alert-message {
+    background-color: $major-blue;
+    width: 96%;
+    margin: auto;
+    border-radius: 0.2em;
+    color: white;
+    padding: 0.5em;
 }
 .web-traffic-chart__time-units {
     @include flexible($direction: row,
-                       $justify-content: space-evenly)
+                       $justify-content: space-evenly);
+    @include mq($sm) {
+        margin-left: auto;
+    }
+}
+.web-traffic-heading-and-time-units-container {
+    @include mq($sm) {
+        @include flexible($direction: row)
+    }
+
+}
+
+.web-traffic-chart__type {
+    @include mq($sm) {
+        margin-left: 1.2em;
+    }
 }
 
 /** Daily Traffic Chart Section **/
 .daily-traffic-chart {
     text-align: center;
+    padding: 0.9em;
+    border-top: $border-settings;
+    border-bottom: $border-settings;
+    @include mq($sm) {
+        border-right: $border-settings;
+        border-bottom:  $border-settings;
+    }
 }
 
 .mobile-users-chart {
     text-align: center;
+    padding: 0.9em;
+    border-bottom: $border-settings;
+    @include mq($sm) {
+        border-bottom:  $border-settings;
+        border-top: $border-settings;
+    }
 }
 
 /** Social Stats Section **/
@@ -44,6 +85,10 @@
 }
 .social-stats {
     text-align: center;
+}
+
+.social-media-type {
+    color: $major-blue;
 }
 
 .social-stats__container__twitter,
@@ -77,7 +122,7 @@
 /** Create blue background for social icons **/
 .social-icon-container {
     border-radius: 50%;
-    background-color: $banner-bg;
+    background-color: $major-blue;
     width: 40px;
     height: 40px;
 }
@@ -113,7 +158,10 @@
 /**** New Members Section ****/
 .new-members {
     text-align: center;
-    border-top: 1px solid $border-line;
+    border-top: $border-settings;
+    @include mq($sm) {
+        border-right: $border-settings;
+    }
 }
 .new-members__card {
     @include flexible($direction: row);
@@ -145,6 +193,7 @@
 /**** Recent Activities ****/
 .recent-activities {
     text-align: center;
+    border-top: $border-settings;
 }
 .more-details {
     display: inline-block;
@@ -175,7 +224,11 @@
 
 /**** Message User ****/
 .message-user {
+    border-top: $border-settings;
     @include flexible($direction: column);
+    @include mq($sm) {
+        border-right: $border-settings;
+    }
 }
 
 .message-user > * {
@@ -202,10 +255,13 @@
 
 .message-user__send-button {
     margin-top: auto;
+    background-color: $major-blue;
+    color: white;
 }
 
 /**** Settings ****/
 .settings {
+    border-top: $border-settings;
     @include flexible($direction: column);
 
 }
@@ -225,12 +281,40 @@
     @include flexible($direction: column);
     width: 100%;
     margin-top: auto;
+    @include mq($xs) {
+        @include flexible($direction: row);
+
+    }
 
 }
 .settings__buttons__save,
 .settings__buttons__cancel {
     margin-top: 1em;
+    color: white;
+    
+    
 }
+
+//Sets layout for all the buttons on the page //
+button {
+    border-radius: 0.3em;
+    border-width: 0;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.settings__buttons__save {
+    background-color: $major-blue;
+    @include mq($xs) {
+        margin-right: 0.8em;
+    }
+}
+
+.settings__buttons__cancel {
+    background-color: #aaa;
+    
+}
+
 /** sets element width to 100% **/
 .full-width {
     width: 100%;

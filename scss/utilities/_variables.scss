@@ -2,7 +2,8 @@
 
 $banner-bg:#3385c6;
 $nav-bg:#36454f;
-$border-line:#ccc;
+$border-color:#ccc;
+$major-blue: #005b96;
 $default:#51DDFC;
 $error:#E4757A;
 $warning:#FD7856;
@@ -29,6 +30,7 @@ $xs: 576px;
 $sm: 780px;
 $md: 1024px;
 
-
+//Border settings
+$border-settings: 1px solid $border-color;
 
     

@@ -113,14 +113,16 @@
         <input class="search-bar" type="text" placeholder="Search"/>
       </section>
       <section class="web-traffic-chart">
-        <p>Alert! This is wwhat you need to know.</p>
-        <h4 class="headline--secondary ">TRAFFIC</h4>
-        <ul class="web-traffic-chart__time-units">
-          <li id="hourly" class="web-traffic-chart__type traffic-type-selected">Hourly</li>
-          <li id="daily" class="web-traffic-chart__type">Daily</li>
-          <li id="weekly" class="web-traffic-chart__type">Weekly</li>
-          <li id="monthly" class="web-traffic-chart__type">Monthly</li>
-        </ul>
+        <p class="alert-message"><span class="alert">Alert</span> This is wwhat you need to know.</p>
+        <div class="web-traffic-heading-and-time-units-container">
+          <h4 class="headline--secondary ">TRAFFIC</h4>
+          <ul class="web-traffic-chart__time-units">
+            <li id="hourly" class="web-traffic-chart__type traffic-type-selected">Hourly</li>
+            <li id="daily" class="web-traffic-chart__type">Daily</li>
+            <li id="weekly" class="web-traffic-chart__type">Weekly</li>
+            <li id="monthly" class="web-traffic-chart__type">Monthly</li>
+          </ul>
+        </div>
         <div class="web-traffic-chart__figure-wrapper">
             <canvas id="web-traffic-chart__figure">
             </canvas>
@@ -155,7 +157,7 @@
               </svg>
             </div>
             <div class="social-stats__data">
-              <p>Twitter</p>
+              <p class="social-media-type">Twitter</p>
               <p>11,100</p>
             </div>
           </div>
@@ -167,7 +169,7 @@
               </svg>
             </div>
             <div class="social-stats__data">
-              <p>Facebook</p>
+              <p class="social-media-type">Facebook</p>
               <p>10,500</p>
             </div>
           </div>
@@ -194,8 +196,8 @@
               </svg>
             </div>
             <div class="social-stats__data">
-              <p>Google</p>
-              <p>9000</p> 
+              <p class="social-media-type">Google</p>
+              <p>9,000</p> 
             </div>
           </div>
         </div>

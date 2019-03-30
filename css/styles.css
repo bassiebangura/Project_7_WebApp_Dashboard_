@@ -472,6 +472,11 @@ ul {
   -ms-grid-column: 1;
   grid-area: banner;
   background-color: #3385c6;
+  padding: 0.2em 0.8em 0.2em 0.6em;
+}
+
+.banner__container {
+  margin: 0;
 }
 
 .appName {
@@ -488,12 +493,12 @@ ul {
 .profilePicAndName {
   margin-left: 0.5em;
   padding-left: 0.5em;
-  border-left: 1px solid #36454f;
+  border-left: 0.5px solid #36454f;
 }
 
 .profileName {
   position: relative;
-  bottom: 12px;
+  bottom: 8px;
 }
 
 /** Section containing Dashboard Heading and Search Bar **/
@@ -516,6 +521,7 @@ ul {
                                $justify-content: center);
             
         }*/
+  padding: 0.6em 0.6em 0.8em 0.6em;
 }
 
 .search-bar {
@@ -530,6 +536,20 @@ ul {
 /** Traffic Chart Section **/
 .web-traffic-chart {
   text-align: center;
+  padding: 0.9em;
+}
+
+.alert {
+  font-weight: bold;
+}
+
+.alert-message {
+  background-color: #005b96;
+  width: 96%;
+  margin: auto;
+  border-radius: 0.2em;
+  color: white;
+  padding: 0.5em;
 }
 
 .web-traffic-chart__time-units {
@@ -548,13 +568,62 @@ ul {
           align-items: flex-start;
 }
 
+@media (min-width: 780px) {
+  .web-traffic-chart__time-units {
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 780px) {
+  .web-traffic-heading-and-time-units-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+@media (min-width: 780px) {
+  .web-traffic-chart__type {
+    margin-left: 1.2em;
+  }
+}
+
 /** Daily Traffic Chart Section **/
 .daily-traffic-chart {
   text-align: center;
+  padding: 0.9em;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+@media (min-width: 780px) {
+  .daily-traffic-chart {
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
 }
 
 .mobile-users-chart {
   text-align: center;
+  padding: 0.9em;
+  border-bottom: 1px solid #ccc;
+}
+
+@media (min-width: 780px) {
+  .mobile-users-chart {
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+  }
 }
 
 /** Social Stats Section **/
@@ -582,6 +651,10 @@ ul {
 
 .social-stats {
   text-align: center;
+}
+
+.social-media-type {
+  color: #005b96;
 }
 
 .social-stats__container__twitter,
@@ -630,7 +703,7 @@ ul {
 /** Create blue background for social icons **/
 .social-icon-container {
   border-radius: 50%;
-  background-color: #3385c6;
+  background-color: #005b96;
   width: 40px;
   height: 40px;
 }
@@ -666,6 +739,12 @@ ul {
 .new-members {
   text-align: center;
   border-top: 1px solid #ccc;
+}
+
+@media (min-width: 780px) {
+  .new-members {
+    border-right: 1px solid #ccc;
+  }
 }
 
 .new-members__card {
@@ -724,6 +803,7 @@ ul {
 /**** Recent Activities ****/
 .recent-activities {
   text-align: center;
+  border-top: 1px solid #ccc;
 }
 
 .more-details {
@@ -777,6 +857,7 @@ ul {
 
 /**** Message User ****/
 .message-user {
+  border-top: 1px solid #ccc;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -790,6 +871,12 @@ ul {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+
+@media (min-width: 780px) {
+  .message-user {
+    border-right: 1px solid #ccc;
+  }
 }
 
 .message-user > * {
@@ -827,10 +914,13 @@ ul {
 
 .message-user__send-button {
   margin-top: auto;
+  background-color: #005b96;
+  color: white;
 }
 
 /**** Settings ****/
 .settings {
+  border-top: 1px solid #ccc;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -890,9 +980,49 @@ ul {
   margin-top: auto;
 }
 
+@media (min-width: 576px) {
+  .settings__buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
 .settings__buttons__save,
 .settings__buttons__cancel {
   margin-top: 1em;
+  color: white;
+}
+
+button {
+  border-radius: 0.3em;
+  border-width: 0;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.settings__buttons__save {
+  background-color: #005b96;
+}
+
+@media (min-width: 576px) {
+  .settings__buttons__save {
+    margin-right: 0.8em;
+  }
+}
+
+.settings__buttons__cancel {
+  background-color: #aaa;
 }
 
 /** sets element width to 100% **/
@@ -1127,6 +1257,11 @@ a:link {
   width: 32px;
   height: 32px;
   border-radius: 50%;
+}
+
+.profilePic {
+  width: 26px;
+  height: 26px;
 }
 
 .new-members__card__image {
