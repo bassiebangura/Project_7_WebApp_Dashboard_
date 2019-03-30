@@ -158,15 +158,25 @@
 /**** New Members Section ****/
 .new-members {
     text-align: center;
+    padding: 0.9em;
     border-top: $border-settings;
     @include mq($sm) {
         border-right: $border-settings;
     }
 }
+
+ul li.new-members__card:last-child {
+    border-bottom: 0;
+}
+
 .new-members__card {
     @include flexible($direction: row);
     text-align: left;
+    padding: 0.4em 0 0.4em 0;
+    border-bottom: $border-settings;
 }
+
+
 
 .new-members__card__details > * {
     margin: 0 0.5em;
@@ -193,6 +203,7 @@
 /**** Recent Activities ****/
 .recent-activities {
     text-align: center;
+    padding: 0.9em;
     border-top: $border-settings;
 }
 .more-details {
@@ -206,9 +217,15 @@
     
 }
 
+ul li.recent-activities__details:last-child {
+    border-bottom: 0;
+}
+
 .recent-activities__details {
     @include flexible($direction: row);
     text-align: left;
+    padding: 0.4em 0 0.4em 0;
+    border-bottom: $border-settings;
     
 }
 

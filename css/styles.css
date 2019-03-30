@@ -738,6 +738,7 @@ ul {
 /**** New Members Section ****/
 .new-members {
   text-align: center;
+  padding: 0.9em;
   border-top: 1px solid #ccc;
 }
 
@@ -745,6 +746,10 @@ ul {
   .new-members {
     border-right: 1px solid #ccc;
   }
+}
+
+ul li.new-members__card:last-child {
+  border-bottom: 0;
 }
 
 .new-members__card {
@@ -762,6 +767,8 @@ ul {
       -ms-flex-align: start;
           align-items: flex-start;
   text-align: left;
+  padding: 0.4em 0 0.4em 0;
+  border-bottom: 1px solid #ccc;
 }
 
 .new-members__card__details > * {
@@ -803,6 +810,7 @@ ul {
 /**** Recent Activities ****/
 .recent-activities {
   text-align: center;
+  padding: 0.9em;
   border-top: 1px solid #ccc;
 }
 
@@ -815,6 +823,10 @@ ul {
   /*move arrow icon to xtreme right */
   margin-top: auto;
   margin-bottom: auto;
+}
+
+ul li.recent-activities__details:last-child {
+  border-bottom: 0;
 }
 
 .recent-activities__details {
@@ -832,6 +844,8 @@ ul {
       -ms-flex-align: start;
           align-items: flex-start;
   text-align: left;
+  padding: 0.4em 0 0.4em 0;
+  border-bottom: 1px solid #ccc;
 }
 
 .recent-activities__details__activity > * {
