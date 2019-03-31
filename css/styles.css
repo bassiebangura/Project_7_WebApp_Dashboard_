@@ -521,16 +521,29 @@ ul {
                                $justify-content: center);
             
         }*/
-  padding: 0.6em 0.6em 0.8em 0.6em;
+}
+
+.dashboard-header {
+  margin-right: 0.8em;
+}
+
+.search-bar-container {
+  width: 100%;
+  text-align: right;
+  padding: 0.3em 0.5em 0.3em 0;
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
 .search-bar {
   margin-left: auto;
+  padding: 0.2em 0 0.2em 0;
 }
 
 .dashboard-header {
   margin-top: 0;
   margin-bottom: 0;
+  padding: 0.6em 0 0.8em 0.5em;
 }
 
 /** Traffic Chart Section **/
@@ -807,6 +820,10 @@ ul li.new-members__card:last-child {
   }
 }
 
+.new-members__card__details__email {
+  color: #005b96;
+}
+
 /**** Recent Activities ****/
 .recent-activities {
   text-align: center;
@@ -869,9 +886,19 @@ ul li.recent-activities__details:last-child {
   width: 100%;
 }
 
+.activity-hours {
+  font-weight: bold;
+}
+
+.new-members,
+.recent-activities {
+  font-size: 0.8em;
+}
+
 /**** Message User ****/
 .message-user {
   border-top: 1px solid #ccc;
+  padding: 0 0.9em 0.9em 0.9em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -920,6 +947,7 @@ ul li.recent-activities__details:last-child {
 
 .message-user__details__textarea {
   height: 140px;
+  margin-bottom: 0.8em;
 }
 
 .message-user__details__search {
@@ -948,6 +976,7 @@ ul li.recent-activities__details:last-child {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  padding: 0 0.9em 0.9em 0.9em;
 }
 
 .settings > * {
@@ -974,6 +1003,14 @@ ul li.recent-activities__details:last-child {
 .switch {
   margin-left: auto;
   margin-top: 14px;
+}
+
+.send-email {
+  margin-left: 10%;
+}
+
+.set-public {
+  margin-left: 13.5%;
 }
 
 .settings__buttons {
