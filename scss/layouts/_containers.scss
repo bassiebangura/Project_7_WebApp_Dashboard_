@@ -9,7 +9,7 @@
     
     /** Media query for Tablets **/
     @include mq($xs) {
-        grid-template-columns:50px auto;
+        grid-template-columns:60px auto;
         grid-template-rows: minmax(32px, auto);
         grid-template-areas: 
         "banner banner"

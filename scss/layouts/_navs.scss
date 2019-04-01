@@ -15,14 +15,15 @@
     @include mq($xs) {
             @include flexible($direction: column,
                                $justify-content: flex-start);
-            
+            padding-right: 0.8em;
+            padding-left: 0.1em;
         }
     width: 100%;
 }
 
 .main-nav__icon {
     @include mq($xs) {
-        margin-bottom: 1em;
+        margin-bottom: 2.5em;
     }
 }
 

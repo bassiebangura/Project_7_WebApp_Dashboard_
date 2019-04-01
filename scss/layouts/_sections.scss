@@ -67,6 +67,12 @@
     position: relative;
 }
 
+.traffic-type-selected {
+    background-color: green;
+    color: white;
+    border-radius: 12px;
+    padding: 0.2em 0.7em;
+}
 .web-traffic-chart {
     text-align: center;
     padding: 0.9em;

@@ -171,3 +171,8 @@ let dailyTrafficChartConfig = {
 }
 /*** Create new instance of chart using dailyTrafficChartCanvas and dailyTrafficChartConfig object  ***/
 let dailyTrafficChart = new Chart(dailyTrafficChartCanvas, dailyTrafficChartConfig);
+
+/**** The Close Button Functionality ****/
+$(".close").click(function() {
+    $("p").remove(".alert-message");
+})

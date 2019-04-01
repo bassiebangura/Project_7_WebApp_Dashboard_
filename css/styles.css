@@ -431,8 +431,8 @@ ul {
 
 @media (min-width: 576px) {
   .container {
-    -ms-grid-columns: 50px auto;
-        grid-template-columns: 50px auto;
+    -ms-grid-columns: 60px auto;
+        grid-template-columns: 60px auto;
     -ms-grid-rows: minmax(32px, auto);
         grid-template-rows: minmax(32px, auto);
         grid-template-areas: "banner banner" "main-nav main" "main-nav main";
@@ -578,6 +578,13 @@ ul {
   color: white;
   padding: 0.5em;
   position: relative;
+}
+
+.traffic-type-selected {
+  background-color: green;
+  color: white;
+  border-radius: 12px;
+  padding: 0.2em 0.7em;
 }
 
 .web-traffic-chart {
@@ -1134,12 +1141,6 @@ main {
   grid-area: web-traffic-chart;
 }
 
-.traffic-type-selected {
-  background-color: green;
-  border-radius: 12px;
-  padding: 0.1em 0.5em;
-}
-
 .daily-traffic-chart {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
@@ -1229,12 +1230,14 @@ main {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    padding-right: 0.8em;
+    padding-left: 0.1em;
   }
 }
 
 @media (min-width: 576px) {
   .main-nav__icon {
-    margin-bottom: 1em;
+    margin-bottom: 2.5em;
   }
 }
 
