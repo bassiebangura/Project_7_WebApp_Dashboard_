@@ -32,22 +32,46 @@
     padding: 0.6em 0 0.8em 0.5em;   
 }
 
-/** Traffic Chart Section **/
-.web-traffic-chart {
-    text-align: center;
-    padding: 0.9em;
-}
+
+/*************************************
+        Traffic Chart Section 
+ **************************************/
+
+/**** Message Alert ****/
+[class*='close'] {
+    color: white;
+    font: 12px/100% arial, sans-serif;
+    position: absolute;
+    right: 5px;
+    text-decoration: none;
+    top: 9px;
+    padding-right: 0.4em;
+  }
+  
+  .close:after {
+    content: 'X'; /* ANSI X letter */
+  }
+
+
 .alert {
     font-weight: bold;
 }
 .alert-message {
+    text-align: left;
     background-color: $major-blue;
     width: 96%;
     margin: auto;
     border-radius: 0.2em;
     color: white;
     padding: 0.5em;
+    position: relative;
 }
+
+.web-traffic-chart {
+    text-align: center;
+    padding: 0.9em;
+}
+
 .web-traffic-chart__time-units {
     @include flexible($direction: row,
                        $justify-content: space-evenly);
@@ -68,7 +92,9 @@
     }
 }
 
-/** Daily Traffic Chart Section **/
+/******************************************
+         Daily Traffic Chart Section 
+********************************************/
 .daily-traffic-chart {
     text-align: center;
     padding: 0.9em;
@@ -90,7 +116,9 @@
     }
 }
 
-/** Social Stats Section **/
+/*******************************************
+             Social Stats Section 
+********************************************/
 .social-stats__container {
     /** Media Query **/
     @include mq($xs) {
