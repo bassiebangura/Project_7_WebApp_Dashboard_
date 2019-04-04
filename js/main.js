@@ -1,3 +1,49 @@
+/****************************************************************
+          SETTING BORDER AND COLOR FOR ACTIVE NAV ITEM
+****************************************************************/
+
+const removeActiveClass = (classList)  => {
+    //function removes active class li item and svg <path> element
+    classList.each(function (i) {
+        if ( $(this).hasClass("active")) {
+            $(this).removeClass("active")
+            $(this).children().children().children().children().removeClass("active")
+        }  
+    });
+}
+
+$("#nav-item-dashboard").click(function(event) {
+    let classListOfElements = $(".main-nav__icon");
+    removeActiveClass(classListOfElements);
+    $("#nav-item-dashboard").children().addClass("active"); //add active class to li item
+    $("#nav-item-dashboard").children().children().children().children().children().addClass("active");//add acitve class to svg path element
+    
+});
+
+$("#nav-item-new-members").click(function(event) {
+    let classListOfElements = $(".main-nav__icon");
+    removeActiveClass(classListOfElements);
+    $("#nav-item-new-members").children().addClass("active");//add active class to li item
+    $("#nav-item-new-members").children().children().children().children().children().addClass("active");//add active class to svg path element
+    
+});
+
+$("#nav-item-daily-traffic").click(function(event) {
+    let classListOfElements = $(".main-nav__icon");
+    removeActiveClass(classListOfElements);
+    $("#nav-item-daily-traffic").children().addClass("active");//add active class to li item
+    $("#nav-item-daily-traffic").children().children().children().children().children().addClass("active");//add active class to svg path element
+    
+});
+
+$("#nav-item-settings").click(function(event) {
+    let classListOfElements = $(".main-nav__icon");
+    removeActiveClass(classListOfElements);
+    $("#nav-item-settings").children().addClass("active");//add active class to li item
+    $("#nav-item-settings").children().children().children().children().children().addClass("active");//add active class to svg path element
+    
+});
+
 /**************************************************************
                     WEB TRAFFIC  CHART                         
 ****************************************************************/ 

@@ -533,13 +533,13 @@ ul {
   padding: 0.3em 0.5em 0.3em 0;
   border-left: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
-  height: 50px;
 }
 
 .search-bar {
   margin-left: auto;
-  padding: 0.1em 0 0.1em 0;
-  margin-top: 0.8em;
+  padding: 0.2em 0 0.2em 0;
+  border: 1px solid #ccc;
+  border-radius: 2px;
 }
 
 .dashboard-header {
@@ -923,9 +923,10 @@ ul li.recent-activities__details:last-child {
   font-weight: bold;
 }
 
-.new-members,
-.recent-activities {
-  font-size: 0.8em;
+/*** setting fonts for new-members and settings container ***/
+.new-members__card__info-container,
+.recent-activities__details-container {
+  font-size: 1em;
 }
 
 /**** Message User ****/
@@ -1233,14 +1234,26 @@ main {
         -ms-flex-align: start;
             align-items: flex-start;
     padding-right: 0.8em;
-    padding-left: 0.1em;
   }
 }
 
+li.main-nav__icon {
+  padding-left: 0.6em;
+  margin-left: 0;
+}
+
 @media (min-width: 576px) {
-  .main-nav__icon {
+  li.main-nav__icon {
     margin-bottom: 2.5em;
   }
+}
+
+li.main-nav__icon.active {
+  border-left: 3px solid green;
+}
+
+li path.active {
+  fill: #eee;
 }
 
 .headline--primary {

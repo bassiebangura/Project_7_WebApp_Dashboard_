@@ -16,14 +16,25 @@
             @include flexible($direction: column,
                                $justify-content: flex-start);
             padding-right: 0.8em;
-            padding-left: 0.1em;
         }
     width: 100%;
 }
 
-.main-nav__icon {
+li.main-nav__icon {
+    padding-left: 0.6em;
+    margin-left: 0;
     @include mq($xs) {
         margin-bottom: 2.5em;
     }
 }
+
+//building active nav item
+li.main-nav__icon.active {
+    border-left: 3px solid green;
+}
+
+li path.active {
+    fill: #eee;
+}
+
 

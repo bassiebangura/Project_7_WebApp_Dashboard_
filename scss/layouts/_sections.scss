@@ -24,6 +24,8 @@
 .search-bar {
     margin-left: auto;
     padding: 0.2em 0 0.2em 0;
+    border: $border-settings;
+    border-radius: 2px;
 }
 
 .dashboard-header {
@@ -295,12 +297,10 @@ ul li.recent-activities__details:last-child {
     font-weight: bold;
 }
 
-
-//setting recent activities and new members sections font
-
-.new-members,
-.recent-activities {
-    font-size: 0.8em;
+/*** setting fonts for new-members and settings container ***/
+.new-members__card__info-container,
+.recent-activities__details-container {
+    font-size: 1em;
 }
 
 /**** Message User ****/
