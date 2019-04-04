@@ -22,6 +22,7 @@
     @include mq($md) {
         width: 95%;
         margin: auto;
+        border-right: $border-settings;
     }
 }
 

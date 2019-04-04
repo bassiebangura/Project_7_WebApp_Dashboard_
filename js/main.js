@@ -7,7 +7,7 @@ const removeActiveClass = (classList)  => {
     classList.each(function (i) {
         if ( $(this).hasClass("active")) {
             $(this).removeClass("active")
-            $(this).children().children().children().children().removeClass("active")
+            $(this).children().children().children().children().children().removeClass("active")
         }  
     });
 }
@@ -15,7 +15,7 @@ const removeActiveClass = (classList)  => {
 $("#nav-item-dashboard").click(function(event) {
     let classListOfElements = $(".main-nav__icon");
     removeActiveClass(classListOfElements);
-    $("#nav-item-dashboard").children().addClass("active"); //add active class to li item
+    $("#nav-item-dashboard").addClass("active"); //add active class to li item
     $("#nav-item-dashboard").children().children().children().children().children().addClass("active");//add acitve class to svg path element
     
 });
@@ -23,7 +23,7 @@ $("#nav-item-dashboard").click(function(event) {
 $("#nav-item-new-members").click(function(event) {
     let classListOfElements = $(".main-nav__icon");
     removeActiveClass(classListOfElements);
-    $("#nav-item-new-members").children().addClass("active");//add active class to li item
+    $("#nav-item-new-members").addClass("active");//add active class to li item
     $("#nav-item-new-members").children().children().children().children().children().addClass("active");//add active class to svg path element
     
 });
@@ -31,7 +31,7 @@ $("#nav-item-new-members").click(function(event) {
 $("#nav-item-daily-traffic").click(function(event) {
     let classListOfElements = $(".main-nav__icon");
     removeActiveClass(classListOfElements);
-    $("#nav-item-daily-traffic").children().addClass("active");//add active class to li item
+    $("#nav-item-daily-traffic").addClass("active");//add active class to li item
     $("#nav-item-daily-traffic").children().children().children().children().children().addClass("active");//add active class to svg path element
     
 });
@@ -39,7 +39,7 @@ $("#nav-item-daily-traffic").click(function(event) {
 $("#nav-item-settings").click(function(event) {
     let classListOfElements = $(".main-nav__icon");
     removeActiveClass(classListOfElements);
-    $("#nav-item-settings").children().addClass("active");//add active class to li item
+    $("#nav-item-settings").addClass("active");//add active class to li item
     $("#nav-item-settings").children().children().children().children().children().addClass("active");//add active class to svg path element
     
 });
@@ -226,7 +226,7 @@ $(".close").click(function() {
             SEND MESSAGE TO SELECTED USER
  *****************************************************************/
 $(".message-user__send-button").click(function() {
-    if ($(".message-user__details__search").val() == '' || $(".message-user__details__textarea").val()) {
+    if ($(".message-user__details__search").val() == '' || $(".message-user__details__textarea").val() == '') {
         alert("Error! One or More required field is empty.")
     }
     $(".message-user__details__search").val('').blur();

@@ -11,6 +11,9 @@
 
 .dashboard-header {
     margin-right: 0.8em;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0.6em 0 0.8em 0.5em;   
 }
 
 .search-bar-container {
@@ -27,13 +30,6 @@
     border: $border-settings;
     border-radius: 2px;
 }
-
-.dashboard-header {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 0.6em 0 0.8em 0.5em;   
-}
-
 
 /*************************************
         Traffic Chart Section 
