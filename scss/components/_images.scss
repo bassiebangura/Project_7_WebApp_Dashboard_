@@ -16,13 +16,14 @@
 }
 
 .main-nav__icon {
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
+    @include mq($xs) {
+        width: 32px;
+        height: 32px;
+    }
+ 
 }
-
-
-
-
 
 .st0{
     fill: #888;

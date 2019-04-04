@@ -1,7 +1,7 @@
 .container  {
     display: grid;
     grid-template-columns:minmax(0, 1fr);
-    grid-template-rows: minmax(32px, auto);
+    grid-template-rows: minmax(45px, auto);
     grid-template-areas: 
     "banner"
     "main-nav"
@@ -10,7 +10,7 @@
     /** Media query for Tablets **/
     @include mq($xs) {
         grid-template-columns:60px auto;
-        grid-template-rows: minmax(32px, auto);
+        grid-template-rows: minmax(45px, auto);
         grid-template-areas: 
         "banner banner"
         "main-nav main"

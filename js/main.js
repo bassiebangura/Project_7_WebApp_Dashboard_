@@ -67,12 +67,11 @@ let webTrafficMonthlyData = ['1', '8', '10', '10', '9', '7', '5', '6', '8', '3',
 
 const webTrafficChartCanvas = document.getElementById("web-traffic-chart__figure").getContext('2d');
 let webTrafficChartConfig = {
-    type: 'bar',
+    type: 'line',
     data: {
         labels: webTrafficHourlyLabels,
         datasets: [{
-            type: 'line',
-            label: "Temperature (Celsius)",
+            label: "Traffic",
             data: webTrafficHourlyData
         }]
     },
@@ -221,4 +220,16 @@ let dailyTrafficChart = new Chart(dailyTrafficChartCanvas, dailyTrafficChartConf
 /**** The Close Button Functionality ****/
 $(".close").click(function() {
     $("p").remove(".alert-message");
+})
+
+/*****************************************************************
+            SEND MESSAGE TO SELECTED USER
+ *****************************************************************/
+$(".message-user__send-button").click(function() {
+    if ($(".message-user__details__search").val() == '' || $(".message-user__details__textarea").val()) {
+        alert("Error! One or More required field is empty.")
+    }
+    $(".message-user__details__search").val('').blur();
+    $(".message-user__details__textarea").val('').blur(); 
+
 })

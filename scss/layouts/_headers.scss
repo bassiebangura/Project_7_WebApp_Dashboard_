@@ -2,11 +2,16 @@
     grid-area: banner;
     background-color: $banner-bg;
     padding: 0.2em 0.8em 0.2em 0.6em;
+    border-bottom: 1px solid #005b96;
 }
 
 .banner__container {
     margin: 0;
     color: white;
+    font-size: 0.8em;
+    @include mq($xs) {
+        font-size: 1em;
+    }
    
 }
 
@@ -23,16 +28,23 @@
     margin-top: 0.3em;
     width: 20px;
     height: 20px;
+    transition: all .2s ease-in-out;
+    position: relative;
 }
 
 .notification-icon-path {
     fill: #eee;
 }
 
+.notification-icon:hover { 
+    transform: scale(1.1); 
+
+}
+
 .notification-icon::after {
     content: '';
-    position: relative;
-    top: -33px;
+    position: absolute;
+    top: -3px;
     left: 16px;
     display: inline-block;
     width: 7px;
@@ -47,8 +59,12 @@
     border-left: 0.5px solid $nav-bg;
 }
 .profileName {
+    font-size: 0.7em;
     position: relative;
     bottom: 8px;
+    @include mq($xs) {
+        font-size: 1em;
+    }
 }
 
 

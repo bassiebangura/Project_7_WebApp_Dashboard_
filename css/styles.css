@@ -422,8 +422,8 @@ ul {
   display: grid;
   -ms-grid-columns: minmax(0, 1fr);
       grid-template-columns: minmax(0, 1fr);
-  -ms-grid-rows: minmax(32px, auto);
-      grid-template-rows: minmax(32px, auto);
+  -ms-grid-rows: minmax(45px, auto);
+      grid-template-rows: minmax(45px, auto);
       grid-template-areas: "banner" "main-nav" "main";
   /** Media query for Tablets **/
   /** Media Query for Desktop View **/
@@ -433,8 +433,8 @@ ul {
   .container {
     -ms-grid-columns: 60px auto;
         grid-template-columns: 60px auto;
-    -ms-grid-rows: minmax(32px, auto);
-        grid-template-rows: minmax(32px, auto);
+    -ms-grid-rows: minmax(45px, auto);
+        grid-template-rows: minmax(45px, auto);
         grid-template-areas: "banner banner" "main-nav main" "main-nav main";
   }
 }
@@ -473,11 +473,19 @@ ul {
   grid-area: banner;
   background-color: #3385c6;
   padding: 0.2em 0.8em 0.2em 0.6em;
+  border-bottom: 1px solid #005b96;
 }
 
 .banner__container {
   margin: 0;
   color: white;
+  font-size: 0.8em;
+}
+
+@media (min-width: 576px) {
+  .banner__container {
+    font-size: 1em;
+  }
 }
 
 .styleChrist {
@@ -493,16 +501,24 @@ ul {
   margin-top: 0.3em;
   width: 20px;
   height: 20px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  position: relative;
 }
 
 .notification-icon-path {
   fill: #eee;
 }
 
+.notification-icon:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .notification-icon::after {
   content: '';
-  position: relative;
-  top: -33px;
+  position: absolute;
+  top: -3px;
   left: 16px;
   display: inline-block;
   width: 7px;
@@ -518,8 +534,15 @@ ul {
 }
 
 .profileName {
+  font-size: 0.7em;
   position: relative;
   bottom: 8px;
+}
+
+@media (min-width: 576px) {
+  .profileName {
+    font-size: 1em;
+  }
 }
 
 /** Section containing Dashboard Heading and Search Bar **/
@@ -593,6 +616,7 @@ ul {
 }
 
 .alert-message {
+  font-size: 0.8em;
   text-align: left;
   background-color: #005b96;
   width: 98%;
@@ -601,6 +625,12 @@ ul {
   color: white;
   padding: 0.5em;
   position: relative;
+}
+
+@media (min-width: 576px) {
+  .alert-message {
+    font-size: 1em;
+  }
 }
 
 .traffic-type-selected {
@@ -616,6 +646,7 @@ ul {
 }
 
 .web-traffic-chart__time-units {
+  font-size: 0.8em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -634,6 +665,12 @@ ul {
 @media (min-width: 780px) {
   .web-traffic-chart__time-units {
     margin-left: auto;
+  }
+}
+
+@media (min-width: 576px) {
+  .web-traffic-chart__time-units {
+    font-size: 1em;
   }
 }
 
@@ -947,7 +984,7 @@ ul li.recent-activities__details:last-child {
 /*** setting fonts for new-members and settings container ***/
 .new-members__card__info-container,
 .recent-activities__details-container {
-  font-size: 1em;
+  font-size: 0.9em;
 }
 
 /**** Message User ****/
@@ -1384,8 +1421,15 @@ a:link {
 }
 
 .main-nav__icon {
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
+}
+
+@media (min-width: 576px) {
+  .main-nav__icon {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 .st0 {
