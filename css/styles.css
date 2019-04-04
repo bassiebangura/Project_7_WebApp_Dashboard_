@@ -477,6 +477,11 @@ ul {
 
 .banner__container {
   margin: 0;
+  color: white;
+}
+
+.styleChrist {
+  color: #ddd;
 }
 
 .appName {
@@ -488,6 +493,22 @@ ul {
   margin-top: 0.3em;
   width: 20px;
   height: 20px;
+}
+
+.notification-icon-path {
+  fill: #eee;
+}
+
+.notification-icon::after {
+  content: '';
+  position: relative;
+  top: -33px;
+  left: 16px;
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background-color: lightgreen;
+  border-radius: 50%;
 }
 
 .profilePicAndName {
@@ -574,7 +595,7 @@ ul {
 .alert-message {
   text-align: left;
   background-color: #005b96;
-  width: 96%;
+  width: 98%;
   margin: auto;
   border-radius: 0.2em;
   color: white;
